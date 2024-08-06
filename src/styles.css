@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 
+    'Nunito', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fafafa;
+}
+
+h1 {
+  margin-block: 2rem 1rem;
+  margin-inline: auto;
+  
+  font-size: 2.4rem;
+  width: fit-content;
+  position: relative;
+}
+
+h1::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  bottom: .5rem;
+  width: 100%;
+  height: 1rem;
+  background: #60f4;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 1.75rem;
+}
+
+h3 {
+  margin-top: 0;
+  font-size: 1.4rem;
+}
+
+h4 {
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+
+h5 {
+  margin-top: 0;
+  font-size: 1rem;
+}
+
+button {
+  font-family: 
+    'Nunito', sans-serif;
+}
+
+.board {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+
+.status {
+  font-size: 1.45rem;
+  margin-block: 0 1rem;
+}
+
+.square {
+  --size: 6rem;
+  font-size: 4rem;
+  font-weight: bold;
+  font-family: 
+    'Nunito', sans-serif;
+  
+  text-align: center;
+  
+  line-height: var(--size);
+  height: var(--size);
+  width: var(--size);
+  
+  color: #121212;
+  background: inherit;
+  border: 
+    .15rem solid #333;
+  
+  float: left;
+  padding: 0;
+  margin: 0;
+}
+
+.square.highlight {
+  background: #8f8;
+}
+
+.square:first-child {
+  border-left: none;
+}
+
+.square:last-child {
+  border-right: none;
+}
+
+.board-row:nth-child(2) .square {
+  border-top: none;
+}
+
+.board-row:nth-child(4) .square {
+  border-bottom: none;
+}
+
+.board-row:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+#reset-btn {
+  margin-block: 2.4rem 0;
+  padding: 0.6rem 1.2rem;
+  font-size: 1.2rem;
+  
+  color: #fff;
+  background: #40f;
+
+  border: none;
+  border-radius: 100vw;
+
+  transition:
+    transform 400ms ease,
+    background 400ms ease,
+    box-shadow 400ms ease,
+    outline 400ms ease;
+}
+
+#reset-btn:hover,
+#reset-btn:focus {
+  transform: scale(1.02);
+  background: #80f;
+  box-shadow: 
+    0 0 .75rem 0 #80f;
+}
+
+#reset-btn:focus {
+  outline: 
+    0.15rem solid #30b;
+  outline-offset: .15rem;
+}
+
+footer {
+  margin-top: 4rem;
+  padding: 1.4rem 1.2rem;
+  background: #222;
+  color: #f8f8f8;
+}
+
+footer p {
+  text-align: center;
+}
+
+footer i {
+  font-size: 1.6rem;
+  color: #57C4DB;
+}
+
+footer a {
+  color: #0cf;
+  text-decoration: none;
+
+  transition:
+    color 400ms ease,
+    box-shadow 400ms ease;
+}
+
+footer a:hover,
+footer a:focus {
+  color: #0ff;
+}
+
+footer a:focus {
+  box-shadow: 0 -.12rem 0 #0ff inset;
+}
+
+#links {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  gap: .6rem 2rem;
+}
